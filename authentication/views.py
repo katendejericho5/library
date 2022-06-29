@@ -27,7 +27,7 @@ def signup(request):
 
         messages.success(request, "Your request has been created succesfully")
 
-        return redirect('signin')
+        return redirect('/signin')
 
 
 
