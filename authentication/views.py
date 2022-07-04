@@ -2,7 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.contrib import messages
+
 from .models import CustomUser
+from django.contrib.auth import authenticate, login
+
 
 User = get_user_model()
 def home(request):
@@ -41,7 +44,27 @@ def signup(request):
 
 
 def signin(request):
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        pass1 = request.POST['pass1']
+
+        user = authenticate(username=username, password=pass1)
+
+        if user is not None:
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/home.html", {'fname':fname})
+            
+
+        else:
+            messages.error(request, "Invalid input")
+            return redirect('home') 
+    
+
+
     return render(request, "authentication/signin.html")
+
 
 def signout(request):
     pass
