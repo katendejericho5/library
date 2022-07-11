@@ -54,12 +54,12 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            return render(request, "authentication/home.html", {'fname':fname})
+            return render(request, "authentication/index.html", {'fname':fname})
             
 
         else:
             messages.error(request, "Invalid input")
-            return redirect('home') 
+            return redirect('index') 
     
 
 
@@ -68,3 +68,7 @@ def signin(request):
 
 def signout(request):
     pass
+
+def index(request):
+    return render(request, "authentication/index.html")
+
