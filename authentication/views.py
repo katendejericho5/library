@@ -73,19 +73,22 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            return render(request, "authentication/home.html", {'fname':fname})
+            return render(request, "authentication/index.html", {'fname':fname})
             
 
         else:
             messages.error(request, "Invalid input")
-            return redirect('home') 
+            return redirect('/index') 
     
 
 
     return render(request, "authentication/signin.html")
 
 
-def signout(request):
-    logout(request)
+
+def index(request):
+    return render(request, "authentication/index.html")
+
+def  signout(request):
     messages.success(request, "Logged out successfully!")
-    return redirect('home')
+    return redirect('/')
