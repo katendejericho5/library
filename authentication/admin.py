@@ -50,3 +50,8 @@ class CustomUserAdmin(UserAdmin):
         )
 admin.site.register(CustomUser, CustomUserAdmin)
 # Register your models here.
+from django.contrib import admin
+
+# Register your models here.
+from . models import Book
+admin.site.register(Book)
