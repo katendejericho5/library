@@ -10,12 +10,12 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <div class="wrapper d-flex justify-content-between align-items-center">
-                        <h5 class="card-title">{{ book.title }}</h5>
+                        <h5 class="card-title">{{ books.title }}</h5>
                         <span class="badge badge-info p-2">{{ book.status|title }}</span>
                     </div>
                     <hr>
-                    <a href="{% url 'book_update' book.id %}" class="btn btn-primary">Edit</a>
-                    <a href="{% url 'book_delete' book.id %}" class="btn btn-danger">Delete</a>
+                    <a href="{% url 'authentication:book_update' pk=books.id %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'authentication:book_delete' pk=books.id %}" class="btn btn-danger">Delete</a>
                 </div>
                 </div>
             </div>

@@ -87,7 +87,7 @@ def signin(request):
 
         else:
             messages.error(request, "Invalid input")
-            return redirect('home') 
+            return redirect('/') 
     
 
 
