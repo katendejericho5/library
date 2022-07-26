@@ -127,7 +127,3 @@ LOGIN_URL = 'users:login'
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
-#Heroku setting
-import django_heroku
-
-django_heroku.settings(locals())

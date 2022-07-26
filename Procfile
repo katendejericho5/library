@@ -1,1 +1,0 @@
-web: gunicorn elibrary.wsgi --log-file -
