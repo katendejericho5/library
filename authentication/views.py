@@ -119,7 +119,7 @@ class BookUpdateView(UpdateView):
 class BookDeleteView(DeleteView):
     model = Book
     template_name = "books/book_delete.html"
-    success_url = reverse_lazy('book_list')
+    success_url = reverse_lazy('authentication:book_list')
 class BookCreateView(CreateView):
     pass
 def index(request):
