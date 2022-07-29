@@ -128,3 +128,5 @@ def index(request):
 def  signout(request):
     messages.success(request, "Logged out successfully!")
     return redirect('/')
+def message(request):
+        return render(request, "books/message.html")

@@ -14,8 +14,11 @@
                         <span class="badge badge-info p-2">{{ book.status|title }}</span>
                     </div>
                     <hr>
-                    <a href="{% url 'authentication:book_update' pk=books.id %}" class="btn btn-primary">Edit</a>
-                    <a href="{% url 'authentication:book_delete' pk=books.id %}" class="btn btn-danger">Delete</a>
+                    <button type="submit"><a href="{% url 'authentication:message' %}">borrow</a><button>
+
+
+                    <!-- <a href="{% url 'authentication:book_update' pk=books.id %}" class="btn btn-primary">Edit</a> -->
+                    <!-- <a href="{% url 'authentication:book_delete' pk=books.id %}" class="btn btn-danger">Delete</a> -->
                 </div>
                 </div>
             </div>
