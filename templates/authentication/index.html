@@ -7,10 +7,11 @@
     <title>E-LIBRARY</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="/" method="get" class="form-inline mt-2 m\t-md-0">
         {% csrf_token %}
+        
         <label for="search">Search</label>
-        <input type="text" id="seacrh" name="search" placeholder="Search Books!">
+        <input type="text" id="search" name="search" placeholder="Search Books!">
         <br>
         <button name="submit">Search</button>
     </form>
