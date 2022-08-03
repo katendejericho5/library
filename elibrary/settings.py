@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)@mwh=uvw3l_!krzoazbe8)i$3=!a24yw-r#j-vphwlv+z$33#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -127,9 +128,11 @@ LOGIN_URL = 'users:login'
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
-#Heroku settings
-try:
-    import django_heroku
-    django_heroku.settings(local())
-except :
-    print("")
+#Heroku setting
+import django_heroku
+django_heroku.settings(locals())
+
+if os.environ.get('DEBUG') == 'True':
+    DEBUG = True 
+elif os.environ.get('DEBUG') == 'False':
+    DEBUG = False
