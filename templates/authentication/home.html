@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link href="styles.css" rel="stylesheet" type="text/css" /> {% endcomment %}
     <title>HOME</title>
 </head>
 <body>
-    <h1><p>WELCOME TO E-LIBRARY!</p></h1>
+    <h1 style="color:rgb(34, 164, 216)">WELCOME TO E-LIBRARY!</h1>
+
     {% csrf_token %}
 
+    <!-- <button type="submit"><a href="/signup">SignUp</a></button> -->
+    <!-- <button type="submit"><a href="/signin">SignIn</a><button> -->
+    <button onclick="window.location='/signup'"> SignUp </button>  
+    <button onclick="window.location='/signin'"> SignIn </button>  
+    <!-- <button type="submit"><a href="{% url 'admin:index' %}">Admin</a><button> -->
+    <button onclick="window.location={% url 'admin:index' %} "> Admin </button>  
 
-    <button type="submit"><a href="/signup">SignUp</a></button>
-    <button type="submit"><a href="/signin">SignIn</a><button>
-    {% comment %} <button type="submit"><a href="/signout">SignOut</a></button> {% endcomment %}
-    <button type="submit"><a href="{% url 'admin:index' %}">Admin</a><button>
-        
+    
 </body>
 </html>

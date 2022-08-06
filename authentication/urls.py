@@ -12,10 +12,10 @@ urlpatterns = [
     path('signin', views.signin, name="signin"), 
     path('signout', views.signout, name="signout"),
     path('booklist/', BookListView.as_view(), name="book_list"),
-    path('create/', BookCreateView.as_view(), name="book_create"),
+    #path('create/', BookCreateView.as_view(), name="book_create"),
     path('<int:pk>/', BookDetailView.as_view(), name="book_detail"),
-    path('<int:pk>/update/', BookUpdateView.as_view(), name="book_update"),
-    path('<int:pk>/delete/', BookDeleteView.as_view(), name="book_delete"),
+    #path('<int:pk>/update/', BookUpdateView.as_view(), name="book_update"),
+    #path('<int:pk>/delete/', BookDeleteView.as_view(), name="book_delete"),
     path('index', views.index, name='index'),
     path('message',views.message,name="message"),
 
