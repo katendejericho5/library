@@ -130,3 +130,5 @@ def  signout(request):
     return redirect('/')
 def message(request):
         return render(request, "books/message.html")
+def email(request):
+        return render(request, "books/email.html")

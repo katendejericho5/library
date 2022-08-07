@@ -18,6 +18,9 @@ urlpatterns = [
     #path('<int:pk>/delete/', BookDeleteView.as_view(), name="book_delete"),
     path('index', views.index, name='index'),
     path('message',views.message,name="message"),
+    path('email',views.email,name="email"),
+
+
 
 ]
    
