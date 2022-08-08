@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LMS Django</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
 </head>
 <body>
 
-    <h3>Sign In</h3>
+    <h1 style="color:rgb(34, 164, 216)">Sign in</h1>
 
     <form action="/signin" method="post">
     {% csrf_token %}
         <label for="">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter a username (only letters)" required>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
         <br>
 
         <label for="">Password</label>
-        <input type="password" id="pass1" name="pass1" placeholder="Enter password (only letters)" required> 
+        <input type="password" id="pass1" name="pass1" placeholder="Enter password" required> 
         <br>
 
         <br> 
 
-        <button type="submit">Sign In</button>
+        <button onclick="window.location='/signin'"> SignIn </button>  
     </form>
     
 </body>

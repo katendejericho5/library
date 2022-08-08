@@ -11,7 +11,11 @@
                     <h3>Booklist</h3>
                 </div>
             </nav>
-            
+            <form action="{% url 'authentication:search' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="search" placeholder="Search for a book title">
+                <button name="submit">Search</button>
+            </form>
             {% for book in books %}
             <div class="card mt-3">
                <div class="card-body d-flex align-items-center justify-content-between">
