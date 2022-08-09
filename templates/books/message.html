@@ -1,14 +1,17 @@
+
 {% extends 'books/base.html' %}
+
+
+
+
 {% block content %}
-<h1><p align ="center">HELLO! 
-        <hr width="50%" align="left"/>
-</p></h1>
-<p>Thank you for  reserving your favourite book,<p>
 
-        <p>Please continue to the library with your school ID and
-             your Reservation Code which has been sent to your email, in order to obtain the book <p> 
-
-                <button type="submit"><a href="{% url 'authentication:home' %}"></b>signout</a><button>
-                <!-- <button type="submit" class="btn btn-primary " style="border-radius: 0%;"><a href="{% url 'authentication:home' %}"></a></b>></a>signout</button> -->
-
+<h1 style="color:rgb(34, 164, 216)">Hello! </h1>
+    <h2> Please Enter your Username and email </h2>
+<p>An Email with a code will be sent to you and its this that you will show <br>the librarian  inorder to borrow the book.
+<form action="https://formsubmit.co/katendejericho5@email.com" method="POST">
+    <input type="text" name="name" placeholder="name" required>
+    <input type="email" name="email" placeholder="email" required>
+    <button type="submit">Send</button>
+</form> 
 {% endblock %}
