@@ -21,6 +21,8 @@ urlpatterns = [
     path('email',views.email,name="email"),
 
 
+    path('search', views.search, name="search"),
+
 
 ]
    

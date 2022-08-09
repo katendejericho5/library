@@ -15,9 +15,16 @@
 
 
 </head>
+
 <body>
 
     <h1 style="color:rgb(34, 164, 216)">Sign in</h1>
+    <style>
+        body {
+            background-image: url(/static/bg.jpg);
+            background-size: cover;
+        }
+    </style>
 
     <form action="/signin" method="post">
     {% csrf_token %}

@@ -130,5 +130,22 @@ def  signout(request):
     return redirect('/')
 def message(request):
         return render(request, "books/message.html")
+
 def email(request):
         return render(request, "books/email.html")
+
+
+
+def search(request):
+    if request.method != 'POST':
+        return render(request, "books/book_list.html")
+    else:
+        searched = request.POST['search']
+        try:
+            book = Book.objects.get(title__contains=searched)
+        except Book.DoesNotExist:
+            book = None
+            return render(request, 'authentication/search.html', {'book': book})
+        else:
+            return render(request, 'authentication/search.html', {'book': book})
+
