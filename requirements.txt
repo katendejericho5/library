@@ -14,5 +14,4 @@ static3==0.7.0
 tzdata==2022.1
 virtualenv==20.14.1
 virtualenv-clone==0.5.7
->>>>>>> 209c70bf131bb517c7ff21a380bde292f19ee792
 whitenoise==6.2.0
