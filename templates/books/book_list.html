@@ -13,7 +13,6 @@
 
             <nav class="navbar navbar-dark bg-primary">
                 <div class="container">
-                    {% comment %} <a class="navbar-brand" href="{% url 'authentication:book_list' %}">Booklist</a>   {% endcomment %}
                     <h3>Booklist</h3>
                 </div>
             </nav>
@@ -21,6 +20,7 @@
                 {% csrf_token %}
                 <input type="text" name="search" placeholder="Search for a book title">
                 <button name="submit">Search</button>
+                
             </form>
             {% for book in books %}
             <div class="card mt-3">
