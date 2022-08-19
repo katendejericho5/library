@@ -14,9 +14,8 @@
                         <span class="badge badge-info p-2">{{ book.status|title }}</span>
                     </div>
                     <hr>
+                    <b> Random Generator : </b> {% random_number 100 1000%}    
                     <button type="submit"><a href="{% url 'authentication:message' %}">borrow</a><button>
-
-
   </div>
                 </div>
             </div>

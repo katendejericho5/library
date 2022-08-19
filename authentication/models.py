@@ -1,14 +1,15 @@
 from django.db import models
-
+from django.db import models
+from django.conf import settings
+from django.urls import reverse
+import datetime
+from django.utils  import timezone
 # Create your models here.
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
     student_number = models.CharField(max_length=20)
     
-from django.db import models
-from django.conf import settings
-from django.urls import reverse
 
 # Create your models here.
 
@@ -20,9 +21,9 @@ STATUS_CHOICES =(
 
 class Book(models.Model):
     title = models.CharField(max_length=200)
-    '''Author = models.CharField(max_length=200 ,default="Enter Author's name")
-    DESCRIPTION = models.CharField(max_length=200 ,default="Enter Description")
-    GENRE = models.CharField(max_length=200 ,default="Enter Genre")'''
+    #Author = models.CharField(max_length=200 ,default="Enter Author's name")
+    #DESCRIPTION = models.CharField(max_length=200 ,default="Enter Description")
+    #GENRE = models.CharField(max_length=200 ,default="Enter Genre")'''
     
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
