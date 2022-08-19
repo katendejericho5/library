@@ -1,8 +1,5 @@
 {% extends 'books/base.html' %}
 
-
-
-
 {% block content %}
 <section class="container">
     <div class="row">
@@ -13,9 +10,7 @@
                         <h5 class="card-title">{{ books.title }}</h5>
                         <span class="badge badge-info p-2">{{ book.status|title }}</span>
                     </div>
-                    <hr>
-                    <b> Random Generator : </b> {% random_number 100 1000%}    
-                    <button type="submit"><a href="{% url 'authentication:message' %}">borrow</a><button>
+                    <hr><button type="submit"><a href="{% url 'authentication:message' %}">borrow</a><button>
   </div>
                 </div>
             </div>
