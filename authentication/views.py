@@ -64,6 +64,12 @@ def signup(request):
 
         return redirect('/signin')
 
+        subject ='Welcome to elibrary'
+        message ='Hi ,thank you for registering in library'
+        email_from=settings.EMAIL_HOST_USER
+        recipient_list=[user.email,]
+        send_mail(subject,message,email_from,recipient_list)
+
 
 
     return render(request, "authentication/signup.html")
@@ -144,3 +150,6 @@ def search(request):
             return render(request, 'authentication/search.html', {'book': book})
         else:
             return render(request, 'authentication/search.html', {'book': book})
+
+from django.conf import settings
+from django.core.mail import send_mail

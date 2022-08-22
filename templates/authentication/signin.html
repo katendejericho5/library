@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>signin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>LMS Django</title>
+    <title>signin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,7 +18,7 @@
 
 <body>
 
-    <h1 style="color:rgb(34, 164, 216)">Sign in</h1>
+    <h1 style="background-color: rgba(176, 224, 230, 0.559);">Sign in</h1>
     <style>
         body {
             background-image: url(/static/bg.jpg);
@@ -28,17 +28,17 @@
 
     <form action="/signin" method="post">
     {% csrf_token %}
-        <label style="color:rgb(19, 235, 22)" for="">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter username" required>
+        <label style="color:rgb(19, 203, 235)" for="">Username</label>
+        <input style="background-color: rgba(176, 224, 230, 0.269);" type="text" id="username" name="username" placeholder="Enter username" required>
         <br>
 
-        <label style="color:rgb(19, 235, 22)" for="">Password</label>
-        <input type="password" id="pass1" name="pass1" placeholder="Enter password" required> 
+        <label style="color:rgb(19, 203, 235)"  for="">Password</label>
+        <input style="background-color: rgba(176, 224, 230, 0.269);" type="password" id="pass1" name="pass1" placeholder="Enter password" required> 
         <br>
 
         <br> 
 
-        <button style="color:rgb(34, 164, 216)" onclick="window.location='/signin'"> SignIn </button>  
+        <button style="background-color: rgba(176, 224, 230, 0.269);" onclick="window.location='/signin'"> SignIn </button>  
     </form>
     
 </body>
