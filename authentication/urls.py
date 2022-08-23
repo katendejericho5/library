@@ -19,7 +19,8 @@ urlpatterns = [
     path('index', views.index, name='index'),
     path('message',views.message,name="message"),
     path('search', views.search, name="search"),
-    
+    path('message',views.credit,name="credit"),
+
 
 ]
 
