@@ -141,7 +141,14 @@ def message(request):
 def credit(request):
         return render(request, "books/credit.html")
 
-
+from django.core.mail import send_mail
+from django.conf import settings
+#send_mail(
+#subject='A cool subject',
+      #message='A stunning message',
+      #from_email=settings.EMAIL_HOST_USER,
+      #recipient_list=[settings.RECIPIENT_ADDRESS])
+#1
 def search(request):
     if request.method != 'POST':
         return render(request, "books/book_list.html")
