@@ -24,6 +24,7 @@ class Book(models.Model):
     Author = models.CharField(max_length=200 ,default="Enter Author's name")
     DESCRIPTION = models.CharField(max_length=200 ,default="Enter Description")
     GENRE = models.CharField(max_length=200 ,default="Enter Genre")
+    Publisher = models.CharField(max_length=200 ,default="Enter Publisher")
     
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,

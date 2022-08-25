@@ -8,9 +8,13 @@
                 <div class="card-body">
                     <div class="wrapper d-flex justify-content-between align-items-center">
                         <h5 class="card-title">{{ books.title }}</h5>
-                        <span class="badge badge-info p-2">{{ book.status|title }}</span>
+                        <span class="badge badge-info p-2">{{ books.status|title }}</span>
 
                     </div>
+                    <p style="background-color: rgba(176, 224, 230, 0.289);">AUTHOR:{{ books.Author }}</p>
+                <p style="background-color: rgba(176, 224, 230, 0.289);">GENRE: {{ books.GENRE }}</p>
+                <p style="background-color: rgba(176, 224, 230, 0.289);">DESCRIPTION:{{ books.DESCRIPTION }}</p>
+                <p style="background-color: rgba(176, 224, 230, 0.289);">PUBLISHER:{{ books.Publisher }}</p>
                     <hr><button type="submit"><a href="{% url 'authentication:message' %}">borrow</a><button>
                  </div>
                 </div>
