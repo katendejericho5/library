@@ -11,10 +11,10 @@
 <body>
     {% block content %}
         {% if book %}
-            <h2>{{ book.title }}</h2>
-            <p>{{ book.Author }}</p>
-            <p>{{ book.GENRE }}</p>
-            <p>{{ book.DESCRIPTION }}</p>
+            <h2 style="background-color: rgba(176, 224, 230, 0.289);">{{ book.title }}</h2>
+            <p style="background-color: rgba(176, 224, 230, 0.289);">AUTHOR:{{ book.Author }}</p>
+            <p style="background-color: rgba(176, 224, 230, 0.289);">GENRE: {{ book.GENRE }}</p>
+            <p style="background-color: rgba(176, 224, 230, 0.289);">DESCRIPTION:{{ book.DESCRIPTION }}</p>
         {% else %}
             <p>The book you requested for is unavailable</p>
         {% endif %}

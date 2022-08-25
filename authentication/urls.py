@@ -21,7 +21,6 @@ urlpatterns = [
     path('search', views.search, name="search"),
     path('credit',views.credit,name="credit"),
 
-
 ]
 
    
